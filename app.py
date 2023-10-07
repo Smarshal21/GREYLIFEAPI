@@ -26,7 +26,7 @@ def index():
     return "Hello"
 
 # Flask route to handle predictions
-@app.route('/', methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
     try:
         input_data = request.get_json()
