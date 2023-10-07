@@ -4,13 +4,13 @@ import pickle
 app = Flask(__name__)
 
 # Load the trained model
-with open('model.pkl', 'rb') as model_file:
+with open('GREYLIFE/model.pkl', 'rb') as model_file:
     your_trained_model = pickle.load(model_file)
 # Load the PCA object
-with open('pca_object.pkl', 'rb') as pca_file:
+with open('GREYLIFE/pca_object.pkl', 'rb') as pca_file:
     pca_object = pickle.load(pca_file)
 # Load the StandardScaler
-with open('scaler.pkl', 'rb') as scaler_file:
+with open('GREYLIFE/scaler.pkl', 'rb') as scaler_file:
     sc = pickle.load(scaler_file)
 # Function to preprocess input data
 def preprocess_input(data):
