@@ -2,3 +2,5 @@ gunicorn==19.7.1
 flask == 2.2.2
 numpy
 xgboost
+sklearn
+scikit-learn
