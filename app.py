@@ -21,12 +21,12 @@ def preprocess_input(data):
     return features_pca
 
 
-@app.route('/')
-def index():
-    return "Hello"
+# @app.route('/')
+# def index():
+#     return "Hello"
 
 # Flask route to handle predictions
-@app.route('/predict', methods=['POST'])
+@app.route('/', methods=['POST'])
 def predict():
     try:
         input_data = request.get_json()
@@ -36,5 +36,6 @@ def predict():
     except Exception as e:
         return jsonify({'error': str(e)})
 
-# if __name__ == '__main__':
-#     app.run(debug=True, port=8086)
+
+if __name__ == '__main__':
+    app.run(debug=True, port=8086)
