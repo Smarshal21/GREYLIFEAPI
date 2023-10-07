@@ -21,9 +21,9 @@ def preprocess_input(data):
     return features_pca
 
 
-# @app.route('/')
-# def index():
-#     return "Hello"
+@app.route('/')
+def index():
+    return "Hello"
 
 # Flask route to handle predictions
 @app.route('/', methods=['POST'])
