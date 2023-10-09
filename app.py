@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 from flask_cors import CORS
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app)
 
 # Load the trained model
 with open('GREYLIFE/model.pkl', 'rb') as model_file:
