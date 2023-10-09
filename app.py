@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 import numpy as np
 import pickle
 app = Flask(__name__)
+CORS(app)
 
 # Load the trained model
 with open('GREYLIFE/model.pkl', 'rb') as model_file:
