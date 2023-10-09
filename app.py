@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify
 import numpy as np
 import pickle
 from flask_cors import CORS
+
+
 app = Flask(__name__)
 CORS(app)
 
@@ -28,7 +30,7 @@ def index():
     return "Hello"
 
 # Flask route to handle predictions
-@app.route('/prediction', methods=['POST'])
+@app.route('/prediction', methods=['POST', 'GET'])
 def predict():
     try:
         input_data = request.get_json()
