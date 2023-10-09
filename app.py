@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 from flask_cors import CORS
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Load the trained model
 with open('GREYLIFE/model.pkl', 'rb') as model_file:
@@ -40,4 +40,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8086)
+    app.run()
